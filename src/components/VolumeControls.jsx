@@ -9,7 +9,7 @@ function VolumeControl() {
     };
 
     return (
-        <div className="flex text-center gap-2">
+        <div className="flex gap-2">
             <Volume2 />
             <input type="range"
                 min='0'
