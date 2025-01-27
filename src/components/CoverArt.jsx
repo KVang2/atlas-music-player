@@ -1,12 +1,10 @@
 import React from 'react';
 import image from '../assets/placeholder.svg';
 
-function CoverArt() {
+export default function CoverArt() {
     return (
         <div className="flex justify-center">
             <img src={image} alt="PlaceHolder" />
         </div>
     );
 }
-
-export default CoverArt;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SongTitle() {
+export default function SongTitle() {
     return (
         <div className="flex flex-col text-start p-4">
             <p className="font-bold text-text">Tidal Drift</p>
@@ -8,5 +8,3 @@ function SongTitle() {
         </div>
     );
 }
-
-export default SongTitle;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Volume2 } from 'lucide-react';
 
-function VolumeControl() {
+export default function VolumeControl() {
     const [volume, setVolume] = useState(50);
 
     const handleVolume = (event) => {
@@ -22,5 +22,3 @@ function VolumeControl() {
         </div>
     );
 }
-
-export default VolumeControl;

@@ -1,6 +1,6 @@
 import {  Rewind, Play, FastForward, Shuffle } from 'lucide-react';
 
-function PlayControls() {
+export default function PlayControls() {
     return (
         <div className="flex text-center justify-between w-full">
             <button className="pl-3">
@@ -21,5 +21,3 @@ function PlayControls() {
         </div>
     );
 }
-
-export default PlayControls;
