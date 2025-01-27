@@ -18,8 +18,8 @@ export default function Playlist() {
     ];
 
 return (
-    <div>
-        <h1>Playlist</h1>
+    <div className=" bg-primary text-white border border-black rounded-lg dark:bg-darkBackground dark:text-darkText">
+        <h1 className="p-1 m-4">Playlist</h1>
         {songs.map((song) => (
             <PlayListItem
                 key={song.id}

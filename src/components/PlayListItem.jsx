@@ -9,7 +9,7 @@ export default function PlayListItem({ title, artist, duration, isSelected, onCl
 
     return (
         <div className={`flex text-center gap-5 p-4 ${
-            isSelected ? "bg-blue-100" : "hover:bg-gray-100"
+            isSelected ? "bg-secondary" : "hover:bg-hover"
         }`}
         onClick={onClick}>
             <div>

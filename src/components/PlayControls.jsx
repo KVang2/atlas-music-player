@@ -4,19 +4,19 @@ function PlayControls() {
     return (
         <div className="flex text-center justify-center w-full gap-4">
             <button>
-                <p>1x</p>
+                <p className="text-gray-300">1x</p>
             </button>
             <button className="p-2">
-                <Rewind className="text-gray-400 fill-current" />
+                <Rewind className="text-gray-300" />
             </button>
-            <button className="border border-black rounded p-2">
-                <Play className="text-black fill-current"/>
+            <button className="border border-gray-300 rounded p-2">
+                <Play className="text-gray-300"/>
             </button>
             <button className="p-2">
-                <FastForward className="text-black fill-current"/>
+                <FastForward className="text-gray-300"/>
             </button>
             <button>
-                <Shuffle />
+                <Shuffle className="text-gray-300"/>
             </button>
         </div>
     );

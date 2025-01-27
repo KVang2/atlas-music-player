@@ -9,7 +9,7 @@ import Playlist from "./Playlist";
 
 export default function App() {
   return (
-    <div className="flex flex-col justify-between p-8">
+    <div className="flex flex-col justify-between p-8 bg-gray-600">
       <div>
         <MusicPlayer />
       </div>
