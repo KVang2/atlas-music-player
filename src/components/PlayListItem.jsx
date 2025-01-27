@@ -8,7 +8,7 @@ export default function PlayListItem({ title, artist, duration, isSelected, onCl
     };
 
     return (
-        <div className={`flex text-center gap-5 p-4 ${
+        <div className={`flex justify-between gap-5 p-4 ${
             isSelected ? "bg-secondary" : "hover:bg-hover"
         }`}
         onClick={onClick}>
@@ -16,7 +16,7 @@ export default function PlayListItem({ title, artist, duration, isSelected, onCl
                 <p className="font-bold">{title}</p>
                 <p className="text-gray-400">{artist}</p>
             </div>
-            <div className="p-3">
+            <div className="p-2">
                 <p className="text-gray-400">{formatTime(duration)}</p>
             </div>
         </div>

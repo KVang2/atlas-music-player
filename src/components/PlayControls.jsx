@@ -2,8 +2,8 @@ import {  Rewind, Play, FastForward, Shuffle } from 'lucide-react';
 
 function PlayControls() {
     return (
-        <div className="flex text-center justify-center w-full gap-4">
-            <button>
+        <div className="flex text-center justify-between w-full">
+            <button className="pl-3">
                 <p className="text-gray-300">1x</p>
             </button>
             <button className="p-2">
@@ -15,7 +15,7 @@ function PlayControls() {
             <button className="p-2">
                 <FastForward className="text-gray-300"/>
             </button>
-            <button>
+            <button className="pr-3">
                 <Shuffle className="text-gray-300"/>
             </button>
         </div>

@@ -9,14 +9,15 @@ function VolumeControl() {
     };
 
     return (
-        <div className="flex justify-center gap-2 m-3">
-            <Volume2 />
+        <div className="flex justify-center gap-2 m-3 pt-4">
+            <Volume2 className="m-2"/>
             <input
                 type="range"
                 min='0'
                 max='100'
                 value={volume}
                 onChange={handleVolume}
+                className="mt-4 w-full h-2 rounded-lg cursor-pointer"
             />
         </div>
     );
