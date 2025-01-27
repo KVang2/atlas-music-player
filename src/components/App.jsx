@@ -13,18 +13,6 @@ export default function App() {
       <div>
         <MusicPlayer />
       </div>
-      <div className="flex flex-row">
-        <div>
-          <CoverArt />
-          <SongTitle />
-          <PlayControls />
-          <VolumeControl />
-        </div>
-        <div>
-          <PlayListItem />
-          <Playlist />
-        </div>
-      </div>
       <div>
         <Footer />
       </div>
