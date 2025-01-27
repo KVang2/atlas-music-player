@@ -2,7 +2,7 @@ import {  Rewind, Play, FastForward, Shuffle } from 'lucide-react';
 
 function PlayControls() {
     return (
-        <div className="flex text-center gap-4">
+        <div className="flex text-center justify-center gap-4">
             <button>
                 <p>1x</p>
             </button>

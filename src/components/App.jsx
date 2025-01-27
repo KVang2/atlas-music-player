@@ -5,19 +5,25 @@ import SongTitle from './SongTitle';
 import PlayControls from "./PlayControls";
 import VolumeControl from "./VolumeControls";
 import PlayListItem from "./PlayListItem";
+import Playlist from "./Playlist";
 
-function App() {
+export default function App() {
   return (
-    <div className="h-full flex flex-col justify-between p-8 min-h-screen">
+    <div className="flex flex-col justify-between p-8">
       <div>
         <MusicPlayer />
       </div>
-      <div>
-        <CoverArt />
-        <SongTitle />
-        <PlayControls />
-        <VolumeControl />
-        <PlayListItem />
+      <div className="flex flex-row">
+        <div>
+          <CoverArt />
+          <SongTitle />
+          <PlayControls />
+          <VolumeControl />
+        </div>
+        <div>
+          <PlayListItem />
+          <Playlist />
+        </div>
       </div>
       <div>
         <Footer />
@@ -25,5 +31,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

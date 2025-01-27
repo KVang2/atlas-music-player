@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-function PlayListItem() {
-    const [duration, setDuration] = useState(521);
+export default function PlayListItem({ title, artist, duration, isSelected, onClick }) {
 
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);
@@ -11,10 +10,16 @@ function PlayListItem() {
     };
 
     return (
-        <div className="flex text-center gap-5 p-4">
+        <div className={`flex text-center gap-5 p-4 ${
+            isSelected ? "bg-blue-100" : "hover:bg-gray-100"
+        }`}
+        onClick={() => {
+            console.log(`Clicked on song: ${title}`);
+            onClick();
+        }}>
             <div>
-                <p className="font-bold">Electric Fever</p>
-                <p className="text-gray-400">Neon Jungle</p>
+                <p className="font-bold">{title}</p>
+                <p className="text-gray-400">{artist}</p>
             </div>
             <div className="p-3">
                 <p className="text-gray-400">{formatTime(duration)}</p>
@@ -22,5 +27,3 @@ function PlayListItem() {
         </div>
     );
 }
-
-export default PlayListItem;

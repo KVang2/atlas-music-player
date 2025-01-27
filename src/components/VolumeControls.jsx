@@ -9,9 +9,10 @@ function VolumeControl() {
     };
 
     return (
-        <div className="flex gap-2">
+        <div className="flex justify-center gap-2 m-3">
             <Volume2 />
-            <input type="range"
+            <input
+                type="range"
                 min='0'
                 max='100'
                 value={volume}
