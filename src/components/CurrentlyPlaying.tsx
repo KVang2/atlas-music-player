@@ -66,7 +66,7 @@ export default function CurrentlyPlaying() {
     <div className="flex flex-col justify-between p-8 bg-primary text-text rounded-lg border border-black dark:bg-darkBackground dark:text-darkText w-full h-full">
       {currentSong && (
         <>
-          <CoverArt coverArt={currentSong?.coverArt} />
+          <CoverArt cover={currentSong?.coverArt} />
           <SongTitle title={currentSong?.title} artist={currentSong?.artist} />
           <PlayControls 
             currentSongIndex={currentSongIndex}
