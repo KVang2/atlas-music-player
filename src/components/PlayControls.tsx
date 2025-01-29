@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {  Rewind, Play, Pause, FastForward, Shuffle } from 'lucide-react';
+import { Rewind, Play, Pause, FastForward, Shuffle } from 'lucide-react';
 
 interface PlayControlsProps {
     currentSongIndex: number;
