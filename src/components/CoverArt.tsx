@@ -25,7 +25,7 @@ export default function CoverArt({ songId }: CoverArtProps) {
         <div className="flex justify-center">
             <img src={coverArt}
                 alt="Cover Art"
-                className="w-32 h-32 object-cover rounded-md border border-gray-300" />
+                className="w-[400px] h-[400px] object-cover rounded-md border border-gray-300" />
         </div>
     );
 }
