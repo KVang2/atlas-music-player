@@ -32,13 +32,16 @@ export default function MusicPlayer() {
             const songResponse = await fetch(`http://localhost:5173/api/v1/songs/${track.id}`);
             const songData = await songResponse.json();
 
+            console.log("Fetch song data:", songData);
+
             return {
               ...track,
-              coverArt: songData.coverArt || "/default-cover.jpg",
-              song: songData.song || "", 
+              song: songData.song, 
             }
           })
         );
+
+        console.log("Final Playlist with Cover Art:", songPlaylist);
 
         setPlaylist(songPlaylist);
         if (songPlaylist.length > 0) {

@@ -31,7 +31,7 @@ export default function CoverArt({ cover, songId }: CoverArtProps) {
       onMouseLeave={() => setShowLyrics(false)}
     >
       <img 
-        src={cover || "/default-cover.jpg"}
+        src={cover}
         alt="Cover Art"
         className="w-[400px] h-[400px] object-cover rounded-md border border-gray-300"
       />
