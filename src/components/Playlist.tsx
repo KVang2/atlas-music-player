@@ -1,5 +1,5 @@
 import PlayListItem from "./PlayListItem";
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Playlist() {
     const [selectedSong, setSelectedSong] = useState(0);

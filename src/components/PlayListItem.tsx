@@ -1,9 +1,21 @@
-export default function PlayListItem({ title, artist, duration, isSelected, onClick }) {
+interface PlayListItemProps {
+    title: string;
+    artist: string;
+    duration: number;
+    isSelected: boolean;
+    onClick: () => void;
+}
 
-    const formatTime = (seconds) => {
+export default function PlayListItem({ title, artist, duration, isSelected, onClick }: PlayListItemProps) {
+
+    const formatTime = (seconds: number): string => {
+        const hours = Math.floor(seconds / 3600);
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = Math.floor(seconds % 60);
 
+        if (hours > 0) {
+            return `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+        }
         return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
 

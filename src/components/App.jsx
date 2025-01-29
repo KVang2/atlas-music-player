@@ -1,11 +1,5 @@
-import CoverArt from "./CoverArt";
-import Footer from "./Footer";
-import MusicPlayer from "./MusicPlayer";
-import SongTitle from './SongTitle';
-import PlayControls from "./PlayControls";
-import VolumeControl from "./VolumeControls";
-import PlayListItem from "./PlayListItem";
-import Playlist from "./Playlist";
+import Footer from "./Footer.tsx";
+import MusicPlayer from "./MusicPlayer.tsx";
 
 export default function App() {
   return (
