@@ -7,6 +7,7 @@ interface Song {
   title: string;
   artist: string;
   coverArt: string;
+  duration: number;
 }
 
 export default function MusicPlayer() {
@@ -21,7 +22,7 @@ export default function MusicPlayer() {
         const data: Song[] = await response.json();
         setPlaylist(data);
         if (data.length > 0) {
-          setCurrentSongId(data[0].id); // ✅ Start with first song
+          setCurrentSongId(data[0].id);
         }
       } catch (error) {
         console.error("Error fetching playlist:", error);
@@ -42,6 +43,7 @@ export default function MusicPlayer() {
         <div className="flex-1 md:basis-1/2 p-4 m-1">
           <Playlist 
             songs={playlist}
+            currentSongId={currentSongId}
             onSelectSong={setCurrentSongId} />
         </div>
       </div>
