@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
+  darkMode: 'media',
   content: [
     "./src/index.css",
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -14,7 +14,10 @@ export default {
         text: '#E5E7EB',
         hover: '#B9BBB6',
         darkBackground: '#000000',
-        darkText: '#E5E7EB',
+        darkText: '#E0E0E0',
+        darkText2: '#9E9E9E',
+        darkvolume: '#424242',
+        darkBackground2: '#263238',
       }
     },
   },

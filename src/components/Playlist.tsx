@@ -16,7 +16,7 @@ interface PlaylistProps {
 export default function Playlist({ songs, currentSongId, onSelectSong }: PlaylistProps) {
   return (
     <div className=" bg-primary text-white border border-black rounded-lg dark:bg-darkBackground dark:text-darkText">
-        <h1 className="p-1 m-4">Playlist</h1>
+        <h1 className="p-1 m-4 font-bold dark:text-darkText1">Playlist</h1>
         {songs.map((song) => (
             <PlayListItem
                 key={song.id}

@@ -5,9 +5,9 @@ interface SongTitleProps {
 
 export default function SongTitle({ title, artist }: SongTitleProps) {
     return (
-        <div className="flex flex-col text-start p-4">
+        <div className="flex flex-col text-start p-4 dark:">
             <p className="font-bold text-text">{title}</p>
-            <p className="text-text">{artist}</p>
+            <p className="font-light text-text">{artist}</p>
         </div>
     );
 }

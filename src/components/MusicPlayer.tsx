@@ -57,7 +57,10 @@ export default function MusicPlayer() {
 
         console.log("Final Playlist with Cover Art:", songPlaylist);
 
+        // Update playlist state with fetched data
         setPlaylist(songPlaylist);
+
+        // Set first song as default
         if (songPlaylist.length > 0) {
           setCurrentSongId(songPlaylist[0].id);
         }
@@ -69,22 +72,25 @@ export default function MusicPlayer() {
     fetchPlaylist();
   }, []);
 
-  // Find current song
+  // Find current playing song in playlist
   const currentSongIndex = playlist.findIndex(song => song.id === currentSongId);
   const currentSong = playlist[currentSongIndex] || null;
 
-  // Select song
+  // Function handle Selecting a song
   const handleSongSelect = (songId: string) => {
     setCurrentSongId(songId);
-    setIsPlaying(true);
+    setIsPlaying(true); // Play selected song
   };
 
   // Play next song
   const handleNextSong = () => {
     if (!playlist.length || currentSongIndex === -1) return;
+
+    // Shuffle mode, pick random song
     const nextIndex = isShuffling 
       ? Math.floor(Math.random() * playlist.length) 
       : (currentSongIndex + 1) % playlist.length;
+
     setCurrentSongId(playlist[nextIndex].id);
     setIsPlaying(true);
   };

@@ -12,6 +12,7 @@ interface Song {
   song: string;
 }
 
+// Interface defining CurrentlyPlaying component
 interface CurrentlyPlayingProps {
   song: Song | undefined;
   isPlaying: boolean;
@@ -26,6 +27,7 @@ interface CurrentlyPlayingProps {
   onPrevSong: () => void;
 }
 
+// Component for displaying currently playing song details
 export default function CurrentlyPlaying({
   song,
   isPlaying,

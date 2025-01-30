@@ -21,7 +21,7 @@ export default function VolumeControl({ volume, onVolumeChange }: VolumeControlP
                 max="100"
                 value={volume}
                 onChange={handleVolume}
-                className="mt-4 w-full h-2 rounded-lg cursor-pointer"
+                className="mt-4 w-full h-2 rounded-lg cursor-pointer dark:bg-darkvolume"
             />
         </div>
     );
