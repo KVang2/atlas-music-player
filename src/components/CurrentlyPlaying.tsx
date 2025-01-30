@@ -3,11 +3,12 @@ import SongTitle from "./SongTitle";
 import PlayControls from "./PlayControls";
 import VolumeControl from "./VolumeControls";
 
+// Interface defining shape of song object
 interface Song {
   id: string;
   title: string;
   artist: string;
-  coverArt: string;
+  cover: string;
   song: string;
 }
 
@@ -42,7 +43,7 @@ export default function CurrentlyPlaying({
     <div className="flex flex-col justify-between p-8 bg-primary text-text rounded-lg border border-black dark:bg-darkBackground dark:text-darkText w-full h-full">
       {song ? (
         <>
-          <CoverArt cover={song.coverArt} songId={song.id} />
+          <CoverArt cover={song.cover} songId={song.id} />
           <SongTitle title={song.title} artist={song.artist} />
           <PlayControls 
             isPlaying={isPlaying}

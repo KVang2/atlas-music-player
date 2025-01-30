@@ -3,21 +3,33 @@ import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
 import AudioPlayer from "./AudioPlayer";
 
+// Interface defining shape of song object
 interface Song {
   id: string;
   title: string;
   artist: string;
-  coverArt: string;
+  cover: string;
   duration: number;
   song: string;
 }
 
 export default function MusicPlayer() {
+  // State for storing playlist fetched from the API
   const [playlist, setPlaylist] = useState<Song[]>([]);
+
+  // State for tracking currently playing song ID
   const [currentSongId, setCurrentSongId] = useState<string | null>(null);
+
+  // State for play control
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  // State for colume control set to %50
   const [volume, setVolume] = useState<number>(50);
+
+  // State to determine playspeed
   const [playbackSpeed, setPlaybackSpeed] = useState<number>(1);
+
+  // State for shuffling
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
 
   // Fetch playlist from API
@@ -27,6 +39,7 @@ export default function MusicPlayer() {
         const response = await fetch("http://localhost:5173/api/v1/playlist");
         const data: Song[] = await response.json();
 
+        // Fetch additional song details (cover art & song file URL)
         const songPlaylist = await Promise.all(
           data.map(async (track) => {
             const songResponse = await fetch(`http://localhost:5173/api/v1/songs/${track.id}`);
@@ -36,6 +49,7 @@ export default function MusicPlayer() {
 
             return {
               ...track,
+              cover: songData.cover || "/default-cover.jpg",
               song: songData.song, 
             }
           })

@@ -30,10 +30,11 @@ export default function CoverArt({ cover, songId }: CoverArtProps) {
       onMouseEnter={() => setShowLyrics(true)}
       onMouseLeave={() => setShowLyrics(false)}
     >
-      <img 
+      <img
+        key={songId}
         src={cover}
         alt="Cover Art"
-        className="w-[400px] h-[400px] object-cover rounded-md border border-gray-300"
+        className="w-[450px] h-[450px] object-cover rounded-md border border-gray-300"
       />
       {showLyrics && lyrics && (
         <div className="absolute inset-0 bg-black bg-opacity-75 text-white p-4 overflow-auto rounded-md">
