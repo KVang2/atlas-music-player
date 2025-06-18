@@ -3,6 +3,7 @@ import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
 import AudioPlayer from "./AudioPlayer";
 
+
 // Interface defining shape of song object
 interface Song {
   id: string;
@@ -36,13 +37,13 @@ export default function MusicPlayer() {
   useEffect(() => {
     const fetchPlaylist = async () => {
       try {
-        const response = await fetch("http://localhost:5173/api/v1/playlist");
+        const response = await fetch("/api/v1/playlist");
         const data: Song[] = await response.json();
 
         // Fetch additional song details (cover art & song file URL)
         const songPlaylist = await Promise.all(
           data.map(async (track) => {
-            const songResponse = await fetch(`http://localhost:5173/api/v1/songs/${track.id}`);
+            const songResponse = await fetch(`/api/v1/songs/${track.id}`);
             const songData = await songResponse.json();
 
             console.log("Fetch song data:", songData);

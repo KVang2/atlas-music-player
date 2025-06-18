@@ -12,7 +12,7 @@ export default function CoverArt({ cover, songId }: CoverArtProps) {
   useEffect(() => {
     const fetchLyrics = async () => {
       try {
-        const response = await fetch(`http://localhost:5173/api/v1/songs/${songId}/lyrics`);
+        const response = await fetch(`/api/v1/songs/${songId}/lyrics`);
         if (!response.ok) throw new Error("Failed to fetch lyrics");
         const data = await response.json();
         setLyrics(data.lyrics);
